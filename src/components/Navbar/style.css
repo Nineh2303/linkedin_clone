@@ -1,0 +1,123 @@
+.nav
+{
+    margin-left: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+}
+.nav-wrap .active span:after{
+    content: "";
+    transform: scaleX(1);
+    border-bottom: 3px solid var(--white, #fff);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: transform .2s ease-in-out;
+    width: 100%;
+    border-color: rgba(0, 0, 0, 0.9);
+}
+.nav-list,
+.user,
+.work{
+    display: flex;
+    align-items: center;
+}
+.nav-list a,
+.user a,
+.work a{
+    align-items: center;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1.5;
+    min-height: 42px;
+    min-width: 80px;
+    position: relative;
+    text-decoration: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.nav-list span,
+.user span ,
+.work span{
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+    .nav{
+        position: fixed;
+        left: 0;
+        bottom:0;
+        background-color: white;
+        width: 100%;
+    }
+    .nav-list span,
+    .user span,
+    .work span{
+        max-width: 70px;
+    }
+}
+.sign-out{
+    position : absolute;
+    top: 45px;
+    background-color: white ;
+    border-radius: 0 0 5px 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    transition-duration: 167ms;
+    text-align:  center;
+    display: none;
+}
+.nav-list a:hover span,
+.user a:hover span,
+.work a:hover span{
+    color: rgba(0, 0, 0, 0.9);
+}
+.user svg,
+.work svg{
+    width: 24px;
+    border-radius: 50%;
+}
+.user img,
+.work img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.user span,
+.work span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work{
+    border-left: 1px solid rgba(0,0,0,0.08);
+
+}
+.user:hover .sign-out{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.li-gr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.li-gr img{
+    width:15px;
+    height:15px;
+}
